@@ -6,8 +6,12 @@ function getResults(ptr) {
     if (i <= data.length) {
       $('#results').prepend('<h1>' + data[i].title + '</h1><br><br>');
       // $('#results').prepend('<p id="dataentry" data-id=' + data[i]._id + '>' + data[i].title + '</p><br><br>');
-      $('#savenote').data('data-id', data[i]._id);
-      $('#savenote').data('data-id', data[i]._id);
+
+      if (data[i].note) {
+        $('#note').text(data[i].note);
+      } else {
+        $('#savenote').data('data-id', data[i]._id);
+      }
     }
   });
 }
@@ -20,6 +24,7 @@ $('#next').on('click', function() {
   if (ptr === 0) {
     $('#prev').show();
   }
+  $('#note').text('');
   getResults(++ptr);
 
 });
@@ -29,6 +34,7 @@ $('#prev').on('click', function() {
     $('#prev').hide();
   }
   if (ptr > 0) {
+    $('#note').text('');
     getResults(--ptr);
   }
 });
