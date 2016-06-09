@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' type="text/css" />
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <style media="screen">
+    .deleter{
+      text-align:right;
+    }
+    h1 {
+      font-size: 40px;
+      color:white;
+    }
+    body{
+      text-align: center;
+      background-color: cornflowerblue;
+    }
+    .deleter{
+      color: red;
+      margin-left: 20px;
+    }
+    input{
+      width:400px;
+      margin:0 auto;
+      font-size: 42px;
+      height:50px;
+      background-color: antiquewhite;
+    }
+    textarea{
+      width:200px;
+      /*margin:0 auto;*/
+
+      height:400px;
+      font-size: 24px;
+      background-color: antiquewhite;
+
+    }
+    #dataentry{
+      cursor: pointer;
+      font-size: 24px;
+    }
+    #results{
+      background-color: black;
+      width:800px;
+      overflow: auto;
+      margin: 0 auto;
+      height:400px;
+    }
+    #actionbutton{
+      display: inline-block;
+    }
+    #buttons{
+      margin:20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mongo Note App</h1>
+  <div id="userinput">
+      
+      <div class="col-md-2">
+        <textarea id="note"></textarea>
+        <button id='savenote'>Save Notes</button>          
+        
+      </div>
+      
+      <div class="col-md-8">
+        <div id="results">
+          
+        </div>
+        <div>
+          <button id='prev'>previous</button>          
+          <button id='next'>next</button>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <textarea id="note"></textarea>
+        <button id='remove'>Remove Notes</button>
+      </div>
+   
+  </div>
+
+  
+  <script src="app.js"></script>
+</body>
+</html>
